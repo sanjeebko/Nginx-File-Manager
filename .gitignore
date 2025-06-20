@@ -1,0 +1,13 @@
+# Ignore Python cache and environment files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+
+# Ignore config.py for sensitive credentials
+config.py
+
+# Ignore download folder and its contents
+/download/
