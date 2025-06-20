@@ -21,7 +21,10 @@ class ReverseProxyApp(tk.Tk):
         self.create_widgets()
 
     def create_widgets(self):
-        tk.Label(self, text='Reverse Proxy File Manager', font=('Arial', 20, 'bold'), bg='#f7f7f7').pack(pady=18)
+        # Display server info at the top
+        server_info = f"Server: {hostname}"
+        tk.Label(self, text=server_info, font=('Arial', 22, 'bold'), fg='#2c3e50', bg='#f7f7f7').pack(pady=(18, 2))
+        tk.Label(self, text='Reverse Proxy File Manager', font=('Arial', 20, 'bold'), bg='#f7f7f7').pack(pady=8)
         tk.Button(self, text='Download', bg='#3498db', fg='white', font=('Arial', 16), width=25, height=2,
                   command=lambda: self.run_script(DOWNLOAD_SCRIPT, 'Download')).pack(pady=7)
         tk.Button(self, text='Upload', bg='#27ae60', fg='white', font=('Arial', 16), width=25, height=2,
