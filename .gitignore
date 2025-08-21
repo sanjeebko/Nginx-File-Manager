@@ -11,3 +11,5 @@ config.py
 
 # Ignore download folder and its contents
 /download/
+/192_*/
+.vs/
